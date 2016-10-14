@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Set current console title. Run this script with '. t some-title'
+ORIG=$PS1
+TITLE="\e]2;$@\a"
+PS1=${ORIG}${TITLE}

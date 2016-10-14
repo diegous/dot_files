@@ -1,0 +1,32 @@
+[core]
+    editor = vim
+
+[alias]
+    s = status
+    d = diff
+    ch = checkout
+    st = status -sb
+    please = push --force-with-lease
+    stashall = stash --include-untracked
+    l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit -n 15
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red
+    new = green
+
+[color "status"]
+    untracked = red bold
+
+# [user]
+# 	email = some@email.com
+# 	name = some_username

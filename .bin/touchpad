@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Function to enable and disable TouchPad
+TOUCHPAD_ID="$(xinput | grep "TouchPad" | cut -f2 | cut -d"=" -f2)"
+case "$1" in
+  "on")
+    xinput --enable $TOUCHPAD_ID
+    ;;
+  "off")
+    xinput --disable $TOUCHPAD_ID
+    ;;
+  *)
+    echo "Incorrect command, try 'on' or 'off'."
+    ;;
+ esac
