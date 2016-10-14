@@ -38,3 +38,11 @@ touchpad(){
    esac
 }
 
+# Show the name of the branch
+function git_branch(){
+ __git_ps1
+}
+
+export PS1="\w\$(git_branch)$ "
+
+
